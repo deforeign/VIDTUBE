@@ -3,8 +3,6 @@ import ApiError from "../utils/ApiError.js";
 
 const errorHandler = (err, req, res, next) => {
   let error = err;
-
-  // Check ApiError import is valid
   if (typeof ApiError !== 'function') {
     console.error("ApiError is not a constructor:", ApiError);
   }
